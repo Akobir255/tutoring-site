@@ -221,6 +221,25 @@
   max-width: 32ch;
 }
 
+.video-stage--telegram {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: auto;
+  min-height: 420px;
+  padding: 16px;
+}
+
+.telegram-embed {
+  width: 100%;
+}
+
+.telegram-embed iframe {
+  border-radius: 12px;
+}
+
 .lesson-list {
   list-style: none;
   margin: 0;

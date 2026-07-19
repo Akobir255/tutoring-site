@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { getTopic, hasVideo, getEmbedUrl } from '../data/curriculum.js'
 import { Link } from '../router.jsx'
+import TelegramEmbed from '../components/TelegramEmbed.jsx'
 
 export default function TopicDetail({ subjectId, topicId }) {
   const found = getTopic(subjectId, topicId)
@@ -39,8 +40,10 @@ export default function TopicDetail({ subjectId, topicId }) {
         <p className="learn__sub">{topic.blurb}</p>
 
         <div className="topic-detail">
-          <div className="video-stage">
-            {embedUrl ? (
+          <div className={`video-stage${activeLesson?.telegramPost ? ' video-stage--telegram' : ''}`}>
+            {activeLesson?.telegramPost ? (
+              <TelegramEmbed key={activeLesson.id} post={activeLesson.telegramPost} />
+            ) : embedUrl ? (
               <iframe
                 key={activeLesson.id}
                 src={embedUrl}

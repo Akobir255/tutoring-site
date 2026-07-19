@@ -28,7 +28,7 @@ export const SUBJECTS = [
         blurb: 'Quadratics, exponentials, and nonlinear functions — where most score gaps above 650 come from.',
         lessons: [
           { id: 'quadratic-equations', title: 'Quadratic equations', videoId: null },
-          { id: 'nonlinear-functions', title: 'Nonlinear functions', videoId: null },
+          { id: 'nonlinear-functions', title: 'Nonlinear functions', telegramPost: 'Nizomiddins_blog/270' },
           { id: 'exponential-expressions', title: 'Exponential expressions', videoId: null },
           { id: 'equivalent-expressions', title: 'Equivalent expressions', videoId: null },
         ],
@@ -43,6 +43,7 @@ export const SUBJECTS = [
           { id: 'one-variable-data', title: 'One-variable data: distributions', videoId: null },
           { id: 'two-variable-data', title: 'Two-variable data: models and scatterplots', videoId: null },
           { id: 'probability', title: 'Probability and conditional probability', videoId: null },
+          { id: 'webinar-word-problems', title: 'Webinar: solving word problems', telegramPost: 'Nizomiddins_blog/215' },
         ],
       },
       {
@@ -51,9 +52,9 @@ export const SUBJECTS = [
         title: 'Geometry & Trigonometry',
         blurb: 'Area, volume, lines, angles, triangles, and right-triangle trig.',
         lessons: [
-          { id: 'area-volume', title: 'Area and volume', videoId: null },
-          { id: 'lines-angles-triangles', title: 'Lines, angles, and triangles', videoId: null },
-          { id: 'right-triangles-trig', title: 'Right triangles and trigonometry', videoId: null },
+          { id: 'area-volume', title: 'Area and volume', telegramPost: 'Nizomiddins_blog/256' },
+          { id: 'lines-angles-triangles', title: 'Lines, angles, and triangles', telegramPost: 'Nizomiddins_blog/243' },
+          { id: 'right-triangles-trig', title: 'Right triangles and trigonometry', telegramPost: 'Nizomiddins_blog/304' },
           { id: 'circles', title: 'Circles', videoId: null },
         ],
       },
@@ -85,7 +86,7 @@ export const SUBJECTS = [
           { id: 'algebraic-manipulation', title: 'Algebraic manipulation', videoId: null },
           { id: 'solving-equations', title: 'Solving linear and quadratic equations', videoId: null },
           { id: 'sequences', title: 'Sequences', videoId: null },
-          { id: 'graphs-of-functions', title: 'Graphs of functions', videoId: null },
+          { id: 'graphs-of-functions', title: 'Graphs of functions', telegramPost: 'Nizomiddins_blog/270' },
         ],
       },
       {
@@ -104,7 +105,7 @@ export const SUBJECTS = [
         title: 'Geometry',
         blurb: 'Angle properties, similarity, congruence, and circle theorems.',
         lessons: [
-          { id: 'angle-properties', title: 'Angle properties of shapes', videoId: null },
+          { id: 'angle-properties', title: 'Angle properties of shapes', telegramPost: 'Nizomiddins_blog/243' },
           { id: 'similarity-congruence', title: 'Similarity and congruence', videoId: null },
           { id: 'circle-theorems', title: 'Circle theorems', videoId: null },
         ],
@@ -116,7 +117,7 @@ export const SUBJECTS = [
         blurb: 'Perimeter, area, and volume for 2D and 3D shapes, including compound figures.',
         lessons: [
           { id: 'perimeter-area', title: 'Perimeter and area', videoId: null },
-          { id: 'volume-surface-area', title: 'Volume and surface area', videoId: null },
+          { id: 'volume-surface-area', title: 'Volume and surface area', telegramPost: 'Nizomiddins_blog/256' },
         ],
       },
       {
@@ -125,7 +126,7 @@ export const SUBJECTS = [
         title: 'Trigonometry',
         blurb: 'Right-angled and non-right-angled trigonometry, including the sine and cosine rules.',
         lessons: [
-          { id: 'right-angled-trig', title: 'Right-angled trigonometry', videoId: null },
+          { id: 'right-angled-trig', title: 'Right-angled trigonometry', telegramPost: 'Nizomiddins_blog/304' },
           { id: 'sine-cosine-rules', title: 'Sine rule, cosine rule, and area of a triangle', videoId: null },
         ],
       },
@@ -144,13 +145,14 @@ export const SUBJECTS = [
   },
 ]
 
-// A lesson can have EITHER a youtube videoId OR a loomId — never guess which,
-// just fill in whichever one matches where the video actually lives.
+// A lesson can have ONE of: videoId (YouTube), loomId (Loom), or telegramPost (a video
+// uploaded natively to a Telegram channel, embedded via Telegram's official widget).
 // YouTube:  videoId: 'dQw4w9WgXcQ'   (the part after "v=" in the video URL)
 // Loom:     loomId: '8dbfd6942f954ee2970dd735c0cbd410'  (the part after "/share/" in the Loom link)
+// Telegram: telegramPost: 'Nizomiddins_blog/256'  (channel/postNumber, from the post's URL)
 
 export function hasVideo(lesson) {
-  return Boolean(lesson?.videoId || lesson?.loomId)
+  return Boolean(lesson?.videoId || lesson?.loomId || lesson?.telegramPost)
 }
 
 export function getEmbedUrl(lesson) {

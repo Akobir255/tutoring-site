@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { getTopic } from '../data/curriculum.js'
+import { getTopic, hasVideo, getEmbedUrl } from '../data/curriculum.js'
 import { Link } from '../router.jsx'
 
 export default function TopicDetail({ subjectId, topicId }) {
   const found = getTopic(subjectId, topicId)
-  const firstVideoLesson = found?.topic.lessons.find((l) => l.videoId) ?? found?.topic.lessons[0]
+  const firstVideoLesson = found?.topic.lessons.find(hasVideo) ?? found?.topic.lessons[0]
   const [activeLesson, setActiveLesson] = useState(firstVideoLesson)
 
   if (!found) {
@@ -21,6 +21,7 @@ export default function TopicDetail({ subjectId, topicId }) {
   }
 
   const { subject, topic } = found
+  const embedUrl = getEmbedUrl(activeLesson)
 
   return (
     <section className="learn">
@@ -39,10 +40,10 @@ export default function TopicDetail({ subjectId, topicId }) {
 
         <div className="topic-detail">
           <div className="video-stage">
-            {activeLesson?.videoId ? (
+            {embedUrl ? (
               <iframe
                 key={activeLesson.id}
-                src={`https://www.youtube.com/embed/${activeLesson.videoId}`}
+                src={embedUrl}
                 title={activeLesson.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -65,7 +66,7 @@ export default function TopicDetail({ subjectId, topicId }) {
               >
                 <span className="lesson-list__index">{i + 1}</span>
                 <span className="lesson-list__title">{lesson.title}</span>
-                {lesson.videoId ? (
+                {hasVideo(lesson) ? (
                   <span className="lesson-list__status lesson-list__status--ready">Ready</span>
                 ) : (
                   <span className="lesson-list__status">Soon</span>

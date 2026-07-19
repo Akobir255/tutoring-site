@@ -144,6 +144,22 @@ export const SUBJECTS = [
   },
 ]
 
+// A lesson can have EITHER a youtube videoId OR a loomId — never guess which,
+// just fill in whichever one matches where the video actually lives.
+// YouTube:  videoId: 'dQw4w9WgXcQ'   (the part after "v=" in the video URL)
+// Loom:     loomId: '8dbfd6942f954ee2970dd735c0cbd410'  (the part after "/share/" in the Loom link)
+
+export function hasVideo(lesson) {
+  return Boolean(lesson?.videoId || lesson?.loomId)
+}
+
+export function getEmbedUrl(lesson) {
+  if (!lesson) return null
+  if (lesson.loomId) return `https://www.loom.com/embed/${lesson.loomId}`
+  if (lesson.videoId) return `https://www.youtube.com/embed/${lesson.videoId}`
+  return null
+}
+
 export function getSubject(subjectId) {
   return SUBJECTS.find((s) => s.id === subjectId)
 }

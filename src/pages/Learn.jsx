@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SUBJECTS } from '../data/curriculum.js'
+import { SUBJECTS, hasVideo } from '../data/curriculum.js'
 import { Link } from '../router.jsx'
 
 export default function Learn() {
@@ -34,7 +34,7 @@ export default function Learn() {
 
         <div className="learn__grid">
           {subject.topics.map((topic) => {
-            const videoCount = topic.lessons.filter((l) => l.videoId).length
+            const videoCount = topic.lessons.filter(hasVideo).length
             return (
               <Link
                 key={topic.id}

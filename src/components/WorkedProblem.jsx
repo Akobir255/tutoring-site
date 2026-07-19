@@ -22,7 +22,7 @@ export default function WorkedProblem() {
   return (
     <div className="exercise-card">
       <div className="exercise-card__top">
-        <span className="exercise-card__badge">SAT Math \u00B7 Q7</span>
+        <span className="exercise-card__badge">SAT Math · Q7</span>
         <span className="exercise-card__count">{Math.min(visible, STEPS.length)}/{STEPS.length}</span>
       </div>
       <div className="exercise-card__progress">

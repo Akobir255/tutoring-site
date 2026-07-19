@@ -1,0 +1,89 @@
+.exercise-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px 26px 32px;
+  box-shadow: 0 12px 32px rgba(24, 101, 242, 0.12);
+  min-height: 260px;
+}
+
+.exercise-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exercise-card__badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  background: var(--blue-soft);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.exercise-card__count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.exercise-card__progress {
+  height: 8px;
+  background: var(--bg-soft);
+  border-radius: 999px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.exercise-card__progress-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.exercise-card__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.exercise-card__line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--line);
+  opacity: 0.5;
+  transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+.exercise-card__line.is-shown {
+  color: var(--text);
+  opacity: 1;
+}
+
+.exercise-card__line.is-final.is-shown {
+  color: var(--green);
+}
+
+.exercise-card__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .exercise-card__line { font-size: 18px; }
+}

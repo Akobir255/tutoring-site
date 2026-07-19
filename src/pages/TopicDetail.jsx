@@ -42,7 +42,7 @@ export default function TopicDetail({ subjectId, topicId }) {
         <div className="topic-detail">
           <div className={`video-stage${activeLesson?.telegramPost ? ' video-stage--telegram' : ''}`}>
             {activeLesson?.telegramPost ? (
-              <TelegramEmbed key={activeLesson.id} post={activeLesson.telegramPost} />
+              <TelegramEmbed key={activeLesson.id} post={activeLesson.telegramPost} title={activeLesson.title} />
             ) : embedUrl ? (
               <iframe
                 key={activeLesson.id}

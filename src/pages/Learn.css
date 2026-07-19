@@ -222,22 +222,49 @@
 }
 
 .video-stage--telegram {
-  background: var(--bg-soft);
+  background: var(--blue-soft);
   border: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: center;
   aspect-ratio: auto;
-  min-height: 420px;
-  padding: 16px;
+  min-height: 340px;
+  padding: 32px;
 }
 
-.telegram-embed {
-  width: 100%;
+.telegram-watch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  max-width: 36ch;
 }
 
-.telegram-embed iframe {
-  border-radius: 12px;
+.telegram-watch__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--blue);
+  box-shadow: 0 8px 20px rgba(24, 101, 242, 0.15);
+  margin-bottom: 8px;
+}
+
+.telegram-watch__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.telegram-watch__note {
+  font-size: 13.5px;
+  color: var(--text-soft);
+  margin-bottom: 6px;
 }
 
 .lesson-list {

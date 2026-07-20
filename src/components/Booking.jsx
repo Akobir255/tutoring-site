@@ -5,7 +5,7 @@ export default function Booking() {
 
   return (
     <section id="book" className="booking">
-      <div className="container booking__inner">
+      <div className="container booking__inner" data-reveal>
         <h2>{t.booking.heading}</h2>
         <p>{t.booking.sub}</p>
         <div className="hero__actions" style={{ justifyContent: 'center', marginTop: 28 }}>

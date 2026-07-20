@@ -5,10 +5,10 @@ export default function Subjects() {
 
   return (
     <section id="subjects" className="subjects grid-paper">
-      <div className="container">
+      <div className="container" data-reveal>
         <p className="eyebrow">{t.subjects.eyebrow}</p>
         <h2 className="subjects__heading">{t.subjects.heading}</h2>
-        <div className="subjects__grid">
+        <div className="subjects__grid stagger">
           {t.subjects.cards.map((s) => (
             <div key={s.title} className="subject-card">
               <span className="subject-card__tag">{s.tag}</span>

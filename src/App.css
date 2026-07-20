@@ -383,3 +383,73 @@
   color: var(--blue);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
+
+/* ---------- Hero trust strip ---------- */
+.hero__trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.hero__trust:hover { color: var(--blue); }
+
+.hero__trust-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(24, 101, 242, 0.2);
+}
+
+/* ---------- Reveal on scroll ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal] .stagger > * {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+[data-reveal].is-visible .stagger > * { opacity: 1; transform: none; }
+[data-reveal].is-visible .stagger > *:nth-child(2) { transition-delay: 0.08s; }
+[data-reveal].is-visible .stagger > *:nth-child(3) { transition-delay: 0.16s; }
+[data-reveal].is-visible .stagger > *:nth-child(4) { transition-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], [data-reveal] .stagger > * { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- Floating Telegram button (mobile) ---------- */
+.tg-fab {
+  display: none;
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(24, 101, 242, 0.4);
+}
+
+@media (max-width: 720px) {
+  .tg-fab { display: flex; }
+}

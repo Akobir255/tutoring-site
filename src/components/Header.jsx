@@ -13,7 +13,6 @@ export default function Header() {
           <Link to="/#subjects">{t.nav.subjects}</Link>
           <Link to="/#approach">{t.nav.approach}</Link>
           <Link to="/#tutor">{t.nav.tutor}</Link>
-          <Link to="/#testimonials">{t.nav.results}</Link>
         </nav>
         <div className="header__right">
           <div className="lang-toggle" role="group" aria-label="Language">

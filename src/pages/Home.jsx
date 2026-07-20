@@ -2,7 +2,6 @@ import Hero from '../components/Hero.jsx'
 import Subjects from '../components/Subjects.jsx'
 import Approach from '../components/Approach.jsx'
 import AboutTutor from '../components/AboutTutor.jsx'
-import Testimonials from '../components/Testimonials.jsx'
 import Booking from '../components/Booking.jsx'
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
       <AboutTutor />
       <Subjects />
       <Approach />
-      <Testimonials />
+      {/* Testimonials hidden until real quotes are added — restore by re-importing the component */}
       <Booking />
     </>
   )

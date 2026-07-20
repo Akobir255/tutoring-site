@@ -18,6 +18,10 @@ export default function Hero() {
             <a href="#book" className="btn btn-primary">{t.hero.ctaPrimary}</a>
             <a href="#subjects" className="btn btn-ghost">{t.hero.ctaSecondary}</a>
           </div>
+          <a href="#tutor" className="hero__trust">
+            <img src="/tutor.jpg" alt="" className="hero__trust-avatar" />
+            <span>{t.hero.trust}</span>
+          </a>
         </div>
         <div className="hero__visual">
           <WorkedProblem />

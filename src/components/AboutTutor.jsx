@@ -5,7 +5,7 @@ export default function AboutTutor() {
 
   return (
     <section id="tutor" className="tutor">
-      <div className="container tutor__inner">
+      <div className="container tutor__inner" data-reveal>
         <div className="tutor__photo-wrap">
           <img
             src="/tutor.jpg"
@@ -18,7 +18,7 @@ export default function AboutTutor() {
           <p className="eyebrow">{t.tutor.eyebrow}</p>
           <h2 className="tutor__heading">Nizomiddin</h2>
           <p className="tutor__bio">{t.tutor.bio}</p>
-          <div className="tutor__stats">
+          <div className="tutor__stats stagger">
             {t.tutor.stats.map((s) => (
               <div key={s.label} className="tutor__stat">
                 <span className="tutor__stat-value">{s.value}</span>
@@ -27,14 +27,7 @@ export default function AboutTutor() {
             ))}
           </div>
           <div className="hero__actions">
-            <a
-              href="https://t.me/Nizomiddin_6585"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary"
-            >
-              {t.tutor.message}
-            </a>
+            <a href="#book" className="btn btn-primary">{t.tutor.book}</a>
             <a
               href="https://t.me/Nizomiddins_blog"
               target="_blank"

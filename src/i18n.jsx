@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 
 const STRINGS = {
   en: {
@@ -11,6 +11,7 @@ const STRINGS = {
       sub: 'One-on-one tutoring for SAT Math and Cambridge IGCSE / A-Level Math — built around how you actually think, not a script.',
       ctaPrimary: 'Book a trial lesson',
       ctaSecondary: 'See subjects',
+      trust: '800/800 SAT Math · 500+ students taught',
     },
     tutor: {
       eyebrow: 'Meet your tutor',
@@ -22,6 +23,7 @@ const STRINGS = {
         { value: '2 yrs', label: 'online teaching' },
       ],
       message: 'Message on Telegram',
+      book: 'Book a trial lesson',
       follow: 'Follow the channel →',
     },
     subjects: {
@@ -89,6 +91,7 @@ const STRINGS = {
       sub: 'SAT Math va Cambridge IGCSE / A-Level matematikadan yakka tartibdagi darslar — tayyor qolip emas, sizning fikrlashingizga moslab quriladi.',
       ctaPrimary: 'Sinov darsiga yoziling',
       ctaSecondary: 'Fanlarni ko\u2018rish',
+      trust: 'SAT Math 800/800 · 500 dan ortiq o\u2018quvchi',
     },
     tutor: {
       eyebrow: 'Repetitor bilan tanishing',
@@ -100,6 +103,7 @@ const STRINGS = {
         { value: '2 yil', label: 'onlayn o\u2018qitish tajribasi' },
       ],
       message: 'Telegramda yozish',
+      book: 'Sinov darsiga yoziling',
       follow: 'Kanalga obuna bo\u2018lish →',
     },
     subjects: {
@@ -168,6 +172,10 @@ export function LangProvider({ children }) {
       return 'en'
     }
   })
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
 
   const changeLang = (next) => {
     setLang(next)

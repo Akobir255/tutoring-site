@@ -4,10 +4,11 @@ const STRINGS = {
   en: {
     nav: { learn: 'Video lessons', subjects: 'Subjects', approach: 'Approach', tutor: 'Tutor', results: 'Results', cta: 'Book a trial lesson' },
     hero: {
-      eyebrow: 'SAT & Cambridge Math Tutoring',
-      line1: 'Every wrong answer',
-      line2: 'has a reason.',
-      line3: 'We find it.',
+      eyebrow: 'One-on-one online tutoring',
+      line1: 'SAT & Cambridge',
+      line2: 'Math Tutoring —',
+      line3: 'with an 800/800 tutor.',
+      tagline: 'Every wrong answer has a reason. We find it.',
       sub: 'One-on-one tutoring for SAT Math and Cambridge IGCSE / A-Level Math — built around how you actually think, not a script.',
       ctaPrimary: 'Book a trial lesson',
       ctaSecondary: 'See subjects',
@@ -84,10 +85,11 @@ const STRINGS = {
   uz: {
     nav: { learn: 'Video darslar', subjects: 'Fanlar', approach: 'Yondashuv', tutor: 'Repetitor', results: 'Natijalar', cta: 'Sinov darsiga yoziling' },
     hero: {
-      eyebrow: 'SAT va Cambridge matematika repetitorligi',
-      line1: 'Har bir xatoning',
-      line2: 'sababi bor.',
-      line3: 'Biz uni topamiz.',
+      eyebrow: 'Yakka tartibdagi onlayn darslar',
+      line1: 'SAT va Cambridge',
+      line2: 'matematika —',
+      line3: '800/800 natijali repetitor bilan.',
+      tagline: 'Har bir xatoning sababi bor. Biz uni topamiz.',
       sub: 'SAT Math va Cambridge IGCSE / A-Level matematikadan yakka tartibdagi darslar — tayyor qolip emas, sizning fikrlashingizga moslab quriladi.',
       ctaPrimary: 'Sinov darsiga yoziling',
       ctaSecondary: 'Fanlarni ko\u2018rish',

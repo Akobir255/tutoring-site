@@ -453,3 +453,11 @@
 @media (max-width: 720px) {
   .tg-fab { display: flex; }
 }
+
+.hero__tagline {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-top: 20px;
+}

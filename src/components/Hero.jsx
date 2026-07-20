@@ -13,6 +13,7 @@ export default function Hero() {
             {t.hero.line1}<br />{t.hero.line2}<br />
             <span style={{ color: 'var(--blue)' }}>{t.hero.line3}</span>
           </h1>
+          <p className="hero__tagline">{t.hero.tagline}</p>
           <p className="hero__sub">{t.hero.sub}</p>
           <div className="hero__actions">
             <a href="#book" className="btn btn-primary">{t.hero.ctaPrimary}</a>

@@ -5,10 +5,17 @@ export default function Booking() {
         <h2>Start with a trial lesson.</h2>
         <p>30 minutes, one real problem from your syllabus, no obligation to continue.</p>
         <div className="hero__actions" style={{ justifyContent: 'center', marginTop: 28 }}>
-          <a href="mailto:hello@nizomiddintutor.com" className="btn btn-primary">Email to book</a>
-          <a href="#" className="btn btn-ghost">Or schedule online →</a>
+          <a
+            href="https://t.me/Nizomiddin_6585"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-primary"
+          >
+            Message on Telegram
+          </a>
+          <a href="mailto:hello@nizomiddintutor.com" className="btn btn-ghost">Or email to book</a>
         </div>
-        <p className="booking__note">Online scheduling link goes here once you connect Calendly or Cal.com.</p>
+        <p className="booking__note">Fastest reply on Telegram: @Nizomiddin_6585</p>
       </div>
     </section>
   )

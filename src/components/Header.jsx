@@ -9,6 +9,7 @@ export default function Header() {
           <Link to="/learn">Learn</Link>
           <Link to="/#subjects">Subjects</Link>
           <Link to="/#approach">Approach</Link>
+          <Link to="/#tutor">Tutor</Link>
           <Link to="/#testimonials">Results</Link>
         </nav>
         <Link to="/#book" className="btn btn-ghost header__cta">Book a trial lesson</Link>

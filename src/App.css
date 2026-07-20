@@ -269,3 +269,87 @@
 @media (max-width: 600px) {
   .footer__inner { flex-direction: column; gap: 6px; }
 }
+
+/* ---------- About Tutor ---------- */
+.tutor { padding: 96px 0; background: #fff; }
+
+.tutor__inner {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.tutor__photo-wrap {
+  position: relative;
+  max-width: 380px;
+  justify-self: center;
+}
+
+.tutor__photo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border-radius: 24px;
+  background: var(--blue-soft);
+  z-index: 0;
+}
+
+.tutor__photo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 32px rgba(24, 101, 242, 0.12);
+}
+
+.tutor__heading {
+  font-size: 36px;
+  margin-top: 12px;
+}
+
+.tutor__bio {
+  margin-top: 18px;
+  color: var(--text-soft);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 52ch;
+}
+
+.tutor__stats {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.tutor__stat {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tutor__stat-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.tutor__stat-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+@media (max-width: 900px) {
+  .tutor__inner { grid-template-columns: 1fr; gap: 44px; }
+  .tutor__photo-wrap { max-width: 320px; }
+  .tutor__stats { grid-template-columns: repeat(2, 1fr); }
+}

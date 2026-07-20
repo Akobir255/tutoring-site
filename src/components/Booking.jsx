@@ -13,7 +13,7 @@ export default function Booking() {
           >
             Message on Telegram
           </a>
-          <a href="mailto:hello@nizomiddintutor.com" className="btn btn-ghost">Or email to book</a>
+          <a href="mailto:n.davronov@newuu.uz" className="btn btn-ghost">Or email to book</a>
         </div>
         <p className="booking__note">Fastest reply on Telegram: @Nizomiddin_6585</p>
       </div>

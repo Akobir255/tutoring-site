@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from 'react'
 
 const STRINGS = {
   en: {
-    nav: { learn: 'Learn', subjects: 'Subjects', approach: 'Approach', tutor: 'Tutor', results: 'Results', cta: 'Book a trial lesson' },
+    nav: { learn: 'Video lessons', subjects: 'Subjects', approach: 'Approach', tutor: 'Tutor', results: 'Results', cta: 'Book a trial lesson' },
     hero: {
       eyebrow: 'SAT & Cambridge Math Tutoring',
       line1: 'Every wrong answer',
@@ -80,7 +80,7 @@ const STRINGS = {
   },
 
   uz: {
-    nav: { learn: 'Darslar', subjects: 'Fanlar', approach: 'Yondashuv', tutor: 'Repetitor', results: 'Natijalar', cta: 'Sinov darsiga yoziling' },
+    nav: { learn: 'Video darslar', subjects: 'Fanlar', approach: 'Yondashuv', tutor: 'Repetitor', results: 'Natijalar', cta: 'Sinov darsiga yoziling' },
     hero: {
       eyebrow: 'SAT va Cambridge matematika repetitorligi',
       line1: 'Har bir xatoning',

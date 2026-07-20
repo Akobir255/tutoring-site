@@ -1,11 +1,8 @@
-const STATS = [
-  { value: '800/800', label: 'SAT Math score' },
-  { value: 'A*', label: 'Cambridge A-Level Math' },
-  { value: '500+', label: 'students taught' },
-  { value: '2 yrs', label: 'online teaching' },
-]
+import { useLang } from '../i18n.jsx'
 
 export default function AboutTutor() {
+  const { t } = useLang()
+
   return (
     <section id="tutor" className="tutor">
       <div className="container tutor__inner">
@@ -18,15 +15,11 @@ export default function AboutTutor() {
           />
         </div>
         <div className="tutor__copy">
-          <p className="eyebrow">Meet your tutor</p>
+          <p className="eyebrow">{t.tutor.eyebrow}</p>
           <h2 className="tutor__heading">Nizomiddin</h2>
-          <p className="tutor__bio">
-            Presidential School graduate and full-time SAT &amp; Cambridge math tutor.
-            A perfect 800/800 on SAT Math and an A* in A-Level Math — and two years of
-            online teaching spent helping more than 500 students get to their own best scores.
-          </p>
+          <p className="tutor__bio">{t.tutor.bio}</p>
           <div className="tutor__stats">
-            {STATS.map((s) => (
+            {t.tutor.stats.map((s) => (
               <div key={s.label} className="tutor__stat">
                 <span className="tutor__stat-value">{s.value}</span>
                 <span className="tutor__stat-label">{s.label}</span>
@@ -40,7 +33,7 @@ export default function AboutTutor() {
               rel="noreferrer"
               className="btn btn-primary"
             >
-              Message on Telegram
+              {t.tutor.message}
             </a>
             <a
               href="https://t.me/Nizomiddins_blog"
@@ -48,7 +41,7 @@ export default function AboutTutor() {
               rel="noreferrer"
               className="btn btn-ghost"
             >
-              Follow the channel →
+              {t.tutor.follow}
             </a>
           </div>
         </div>

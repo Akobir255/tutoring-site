@@ -12,7 +12,7 @@ export default function Home() {
       <AboutTutor />
       <Subjects />
       <Approach />
-     <Testimonials />
+      <Testimonials />
       <Booking />
     </>
   )

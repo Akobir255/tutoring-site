@@ -1,4 +1,5 @@
 import { RouterProvider, useRouter } from './router.jsx'
+import { LangProvider } from './i18n.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
@@ -20,10 +21,12 @@ function Routes() {
 
 export default function App() {
   return (
-    <RouterProvider>
-      <Header />
-      <Routes />
-      <Footer />
-    </RouterProvider>
+    <LangProvider>
+      <RouterProvider>
+        <Header />
+        <Routes />
+        <Footer />
+      </RouterProvider>
+    </LangProvider>
   )
 }

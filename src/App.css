@@ -353,3 +353,33 @@
   .tutor__photo-wrap { max-width: 320px; }
   .tutor__stats { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ---------- Language toggle ---------- */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.lang-toggle__btn {
+  background: transparent;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.lang-toggle__btn--active {
+  background: #fff;
+  color: var(--blue);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}

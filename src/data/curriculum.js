@@ -28,7 +28,7 @@ export const SUBJECTS = [
         blurb: 'Quadratics, exponentials, and nonlinear functions — where most score gaps above 650 come from.',
         lessons: [
           { id: 'quadratic-equations', title: 'Quadratic equations', videoId: null },
-          { id: 'nonlinear-functions', title: 'Nonlinear functions', telegramPost: 'Nizomiddins_blog/270' },
+          { id: 'nonlinear-functions', title: 'Nonlinear functions', loomId: 'cd9d4d3cb3984ff183f1f49c562df725' },
           { id: 'exponential-expressions', title: 'Exponential expressions', videoId: null },
           { id: 'equivalent-expressions', title: 'Equivalent expressions', videoId: null },
         ],
@@ -52,9 +52,9 @@ export const SUBJECTS = [
         title: 'Geometry & Trigonometry',
         blurb: 'Area, volume, lines, angles, triangles, and right-triangle trig.',
         lessons: [
-          { id: 'area-volume', title: 'Area and volume', telegramPost: 'Nizomiddins_blog/256' },
+          { id: 'area-volume', title: 'Area and volume', loomId: 'd45c6b8021a94424af8bd1efc19a88f6' },
           { id: 'lines-angles-triangles', title: 'Lines, angles, and triangles', telegramPost: 'Nizomiddins_blog/243' },
-          { id: 'right-triangles-trig', title: 'Right triangles and trigonometry', telegramPost: 'Nizomiddins_blog/304' },
+          { id: 'right-triangles-trig', title: 'Right triangles and trigonometry', loomId: '3721c317935748b398d377b5d33519a7' },
           { id: 'circles', title: 'Circles', videoId: null },
         ],
       },
@@ -86,7 +86,7 @@ export const SUBJECTS = [
           { id: 'algebraic-manipulation', title: 'Algebraic manipulation', videoId: null },
           { id: 'solving-equations', title: 'Solving linear and quadratic equations', videoId: null },
           { id: 'sequences', title: 'Sequences', videoId: null },
-          { id: 'graphs-of-functions', title: 'Graphs of functions', telegramPost: 'Nizomiddins_blog/270' },
+          { id: 'graphs-of-functions', title: 'Graphs of functions', loomId: 'cd9d4d3cb3984ff183f1f49c562df725' },
         ],
       },
       {
@@ -117,7 +117,7 @@ export const SUBJECTS = [
         blurb: 'Perimeter, area, and volume for 2D and 3D shapes, including compound figures.',
         lessons: [
           { id: 'perimeter-area', title: 'Perimeter and area', videoId: null },
-          { id: 'volume-surface-area', title: 'Volume and surface area', telegramPost: 'Nizomiddins_blog/256' },
+          { id: 'volume-surface-area', title: 'Volume and surface area', loomId: 'd45c6b8021a94424af8bd1efc19a88f6' },
         ],
       },
       {
@@ -126,7 +126,7 @@ export const SUBJECTS = [
         title: 'Trigonometry',
         blurb: 'Right-angled and non-right-angled trigonometry, including the sine and cosine rules.',
         lessons: [
-          { id: 'right-angled-trig', title: 'Right-angled trigonometry', telegramPost: 'Nizomiddins_blog/304' },
+          { id: 'right-angled-trig', title: 'Right-angled trigonometry', loomId: '3721c317935748b398d377b5d33519a7' },
           { id: 'sine-cosine-rules', title: 'Sine rule, cosine rule, and area of a triangle', videoId: null },
         ],
       },

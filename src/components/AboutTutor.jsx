@@ -1,4 +1,6 @@
+import { Link } from '../router.jsx'
 import { useLang } from '../i18n.jsx'
+import { CONTACT } from '../contactLinks.js'
 
 export default function AboutTutor() {
   const { t } = useLang()
@@ -11,12 +13,14 @@ export default function AboutTutor() {
             src="/tutor.jpg"
             alt="Nizomiddin, SAT and Cambridge math tutor"
             className="tutor__photo"
+            width="440"
+            height="520"
             loading="lazy"
           />
         </div>
         <div className="tutor__copy">
           <p className="eyebrow">{t.tutor.eyebrow}</p>
-          <h2 className="tutor__heading">Nizomiddin</h2>
+          <h2 className="section-heading">Nizomiddin</h2>
           <p className="tutor__bio">{t.tutor.bio}</p>
           <div className="tutor__stats stagger">
             {t.tutor.stats.map((s) => (
@@ -27,9 +31,9 @@ export default function AboutTutor() {
             ))}
           </div>
           <div className="hero__actions">
-            <a href="#book" className="btn btn-primary">{t.tutor.book}</a>
+            <Link to="/#contact" className="btn btn-primary">{t.tutor.book}</Link>
             <a
-              href="https://t.me/Nizomiddins_blog"
+              href={CONTACT.telegramChannel}
               target="_blank"
               rel="noreferrer"
               className="btn btn-ghost"

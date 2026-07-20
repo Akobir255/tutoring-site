@@ -1,18 +1,25 @@
 import Hero from '../components/Hero.jsx'
-import Subjects from '../components/Subjects.jsx'
-import Approach from '../components/Approach.jsx'
+import WhyMe from '../components/WhyMe.jsx'
+import Courses from '../components/Courses.jsx'
+import Process from '../components/Process.jsx'
 import AboutTutor from '../components/AboutTutor.jsx'
-import Booking from '../components/Booking.jsx'
+import Testimonials from '../components/Testimonials.jsx'
+import Results from '../components/Results.jsx'
+import Faq from '../components/Faq.jsx'
+import Contact from '../components/Contact.jsx'
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <WhyMe />
+      <Courses />
+      <Process />
       <AboutTutor />
-      <Subjects />
-      <Approach />
-      {/* Testimonials hidden until real quotes are added — restore by re-importing the component */}
-      <Booking />
+      <Testimonials />
+      <Results />
+      <Faq />
+      <Contact />
     </>
   )
 }

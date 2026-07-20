@@ -81,7 +81,7 @@ export default function TopicDetail({ subjectId, topicId }) {
 
         <div className="topic-detail__cta">
           <p>Want this explained live, for your exact question?</p>
-          <Link to="/#book" className="btn btn-primary">Book a trial lesson</Link>
+          <Link to="/#contact" className="btn btn-primary">Book a trial lesson</Link>
         </div>
       </div>
     </section>

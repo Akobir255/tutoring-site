@@ -35,10 +35,13 @@ Follow the prompts (link/create a project, accept the detected build settings).
 
 ## To customize before launch
 
-- **Testimonials** (`src/components/Testimonials.jsx`) — currently placeholder quotes, swap in real ones
-- **Booking** (`src/components/Booking.jsx`) — currently a `mailto:` link; swap in a Calendly/Cal.com embed link when ready
-- **Contact email** — replace `hello@nizomiddintutor.com` with your real inbox
-- **Subjects copy** (`src/components/Subjects.jsx`) — adjust to the exact exam boards/levels you teach
+- **Contact links** (`src/contactLinks.js`) — ALL contact channels live here:
+  - `whatsapp`: replace `998000000000` with your real WhatsApp number (international format, digits only)
+  - `calendar`: replace with your real Calendly / Cal.com booking link
+  - Telegram + email are already set to your real ones
+- **Testimonials** (`src/i18n.jsx` → `testimonials.quotes`) — swap in real quotes when you have permission to use them
+- **Contact form** (`src/components/Contact.jsx`) — currently opens the visitor's email app pre-filled (works with no backend). To receive submissions directly, create a free Formspree/Web3Forms endpoint and swap the `submit` handler for a `fetch` POST.
+- **All site text** (both English and Uzbek) lives in `src/i18n.jsx`
 
 ## Next phase: student portal
 
